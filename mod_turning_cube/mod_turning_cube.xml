@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4.0" client="site" method="upgrade">
+    <name>Rotating Cube!</name>
+    <author>Hans Saurer</author>
+    <version>1.0.0</version>
+    <description>A rotating cube.</description>
+    <files>
+        <filename>mod_turning_cube.xml</filename>
+        <filename module="mod_turning_cube">mod_turning_cube.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>js/index.html</filename>
+        <filename>js/turningcube.js</filename>
+    </files>
+
+    <config>
+	    <fields name="params">
+            <fieldset name="basic">
+                <field name="playgroundwidth" type="text" default="100" label="Breite:(%)" description="Breite der Spielfläche in Prozent" filter="integer" />
+                <field name="playgroundheight" type="text" default="400" label="Höhe:(px)" description="Höhe der Spielfläche in Pixeln" filter="integer" />
+				<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />  
+            </fieldset>
+        </fields>	
+    </config>
+</extension>
